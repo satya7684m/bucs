@@ -307,7 +307,7 @@
         gap: 3px;
       }
     }
-     footer {
+    footer {
       background-color: #1f1f1f;
       color: white;
       padding: 20px;
@@ -319,32 +319,30 @@
     }
 
     .social {
-      display: flex;
+      display: inline-flex;
       justify-content: center;
       align-items: center;
+      flex-wrap: nowrap;
       gap: 8px;
       margin: 10px 0;
-      flex-wrap: wrap;
+      overflow-x: auto;
     }
 
     .social span {
       color: white;
+      white-space: nowrap;
     }
-
     .social a {
       color: #4da6ff;
       text-decoration: none;
-      padding: 0 5px;
+      white-space: nowrap;
     }
-
     .social a:hover {
-      text-decoration: underline;
+      text-decoration: none;
     }
     @media (max-width: 600px) {
       .social {
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
+        justify-content: flex-start;
       }
     }
   </style>
@@ -794,7 +792,7 @@
       Welcome to our Senior-Junior Connectivity Platform — bridging experience and enthusiasm for growth and mentorship.
     </p>
     <div class="social">
-      <span>Connect with us: <br></span>
+      <span>Follow us:</span>
       <a>Facebook</a> |
       <a>Instagram</a> |
       <a>LinkedIn</a> 

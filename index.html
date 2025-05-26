@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BU_MCA</title>
+  <title>BUCS</title>
   <style>
     * {
       box-sizing: border-box;
@@ -90,6 +90,7 @@
     }
     .welcome-junior p {
       margin: 10px 0;
+      font-family: 'Times New Roman', Times, serif;
     }
      
     .buttons {
@@ -113,12 +114,25 @@
     }
     .copyright{
       text-align: center;
+      background-color: #121212;
+      color: #fff;
     }
   </style>
   <script>
-    function toggleDarkMode() {
+   function toggleDarkMode() {
       document.body.classList.toggle("dark-mode");
+      const modeToggleBtn = document.getElementById("modeToggleBtn");
+      modeToggleBtn.textContent = document.body.classList.contains("dark-mode")
+        ? "Switch to Light Mode"
+        : "Switch to Dark Mode";
     }
+     window.onload = () => {
+      paginateStudents();
+      const modeToggleBtn = document.getElementById("modeToggleBtn");
+      modeToggleBtn.textContent = document.body.classList.contains("dark-mode")
+        ? "Switch to Light Mode"
+        : "Switch to Dark Mode";
+    };
   </script>
 </head>
 <body>
