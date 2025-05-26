@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BU_MCA</title>
+  <title>BUCS</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
@@ -305,6 +305,46 @@
       .pagination {
         flex-direction: column;
         gap: 3px;
+      }
+    }
+     footer {
+      background-color: #1f1f1f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .footer-text {
+      margin: 10px 0;
+    }
+
+    .social {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      margin: 10px 0;
+      flex-wrap: wrap;
+    }
+
+    .social span {
+      color: white;
+    }
+
+    .social a {
+      color: #4da6ff;
+      text-decoration: none;
+      padding: 0 5px;
+    }
+
+    .social a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      .social {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
       }
     }
   </style>
@@ -739,33 +779,33 @@
         <a href="https://www.instagram.com/dipa3917?igsh=NHlrYjZhYmxsemdt"><i class="fab fa-instagram"></i></a>
         <a href=""><i class="fab fa-linkedin"></i></a>
       </div>
-    </div>
-     
+    </div>  
   </div>
-
   <div class="pagination">
     <button id="prevBtn" class="hidden" onclick="prevPage()">Previous</button>
     <span id="pageNum">Page 1</span>
     <button id="nextBtn" onclick="nextPage()">Next</button>
-  </div>
-  <div class="message">
-    <p>We are pleased to introduce our platform—engineered to elevate your digital
-      presence with precision and flexibility. Leverage clickable social buttons to
-      provide direct links to social media profiles, or opt for non-clickable
-      social links to highlight our handles without outbound navigation. This streamlined feature
-      set ensures your online identity is both cohesive and professional. If you require any
-      assistance—whether during your onboarding session or while exploring advanced functionality—
-      please do not hesitate to contact your seniors; we are committed to supporting you every step of the way.
-    </p>
-  </div>
+  </div> 
   <div class="buttons">
     <button id="modeToggleBtn" onclick="toggleDarkMode()">Switch to Dark Mode</button>
   </div>
-
-  <div class="copyright">
-    <footer>
-      <p>&copy; 2025, Computer Science, Berhampur University.</p>
-    </footer>
-  </div>
+  <footer>
+    <p class="footer-text">
+      Welcome to our Senior-Junior Connectivity Platform — bridging experience and enthusiasm for growth and mentorship.
+    </p>
+    <div class="social">
+      <span>Connect with us: <br></span>
+      <a>Facebook</a> |
+      <a>Instagram</a> |
+      <a>LinkedIn</a> 
+    </div>
+    <p class="footer-text">
+      If you need any assistance during onboarding or exploring advanced features, please reach out to your seniors — we're here to support every step of your journey.
+    </p>
+    <p class="footer-text">
+      &copy; 2025 Senior-Junior Connectivity Platform. All rights reserved.
+    </p>
+  </footer>
+</div>
 </body>
 </html>
