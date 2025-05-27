@@ -411,6 +411,15 @@
         ? "Switch to Light Mode"
         : "Switch to Dark Mode";
     };
+    function nofbAlert(){
+      alert("This Person doesn't have Facebook account.");
+    }
+    function noinstaAlert(){
+      alert("This Person doesn't have Instagram account.");
+    }
+    function nolinkedinAlert(){
+      alert("This Person doesn't have LinkedIn account.");
+    }
   </script>
 </head>
 
@@ -426,7 +435,7 @@
   <div class="search-bar">
     <div class="search-container">
       <i class="fa-solid fa-magnifying-glass"></i>
-      <input type="text" id="searchInput" onkeyup="searchStudents()" placeholder="Search by Senior name...">
+      <input type="text" id="searchInput" onkeyup="searchStudents()" placeholder="Search by Senior Name...">
     </div>
   </div>
 
@@ -447,14 +456,14 @@
       <div class="social-links">
         <a href="https://www.facebook.com/share/15QkXfFEGX/"><i class="fa-brands fa-square-facebook"></i></a>
         <a href="https://www.instagram.com/lokanathbisoi?igsh=NXo3cm82c2U1dmFu"><i class="fab fa-instagram"></i></a>
-        <a href=""><i class="fab fa-linkedin"></i></a>
+        <a onclick="nolinkedinAlert()"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
     <div class="student-card">
       <img class="student-photo" src="image/satya.jpg">
       <div class="student-name">Satyabrata Bhuyan <br>MCA</div>
       <div class="social-links">
-        <a><i class="fa-brands fa-square-facebook"></i></a>
+        <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
         <a href="https://www.instagram.com/cs_satya_24/" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://www.linkedin.com/in/satyabrata-bhuyan-223157339/" target="_blank"><i class="fab fa-linkedin"></i></a>
       </div>
@@ -474,7 +483,7 @@
       <img class="student-photo" src="image/milu_ph.jpg">
       <div class="student-name">Manoranjan Das<br>MCA</div>
       <div class="social-links">
-        <a><i class="fa-brands fa-square-facebook"></i></a>
+        <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
         <a href="https://www.instagram.com/manoranjan_das_2003/"><i class="fab fa-instagram"></i></a>
         <a href="https://www.linkedin.com/in/manoranjan-das-40558b302/"><i class="fab fa-linkedin"></i></a>
       </div>
@@ -484,16 +493,16 @@
       <img class="student-photo" src="image/Biswajit Bal.jpg">
       <div class="student-name">Biswajit Bal<br>MCA</div>
       <div class="social-links">
-        <a><i class="fa-brands fa-square-facebook"></i></a>
+        <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
         <a href="https://www.instagram.com/_biswajit_bal_/"><i class="fab fa-instagram"></i></a>
-        <a><i class="fab fa-linkedin"></i></a>
+        <a onclick="nolinkedinAlert()"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
     <div class="student-card">
       <img class="student-photo" src="image/Sambit K. Sethi.jpg">
       <div class="student-name">Sambit Kumar Sethi<br>MCA</div>
       <div class="social-links">
-        <a><i class="fa-brands fa-square-facebook"></i></a>
+        <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
         <a href="https://www.instagram.com/sambit_13_?igsh=MW1mb3l1amtqNTRzbA=="><i class="fab fa-instagram"></i></a>
         <a href="https://www.linkedin.com/in/sambit-kumar-sethi-7a7480303/"><i class="fab fa-linkedin"></i></a>
       </div>
@@ -502,7 +511,7 @@
       <img class="student-photo" src="image/Jyoti Kiran.jpg">
       <div class="student-name">Kiran Jyoti Mohanty<br>MCA</div>
       <div class="social-links">
-        <a><i class="fa-brands fa-square-facebook"></i></a>
+        <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
         <a href="https://www.instagram.com/the_sparkler.kjm?igsh=dHgwdDAxaTI1ZWg4"><i class="fab fa-instagram"></i></a>
         <a href="https://www.linkedin.com/in/kiran-jyoti-mohanty-997119274/"><i class="fab fa-linkedin"></i></a>
       </div>
@@ -511,9 +520,9 @@
       <img class="student-photo" src="image/Bismita Prusty.jpg">
       <div class="student-name">Bismita Prusty<br>MCA</div>
       <div class="social-links">
-        <a><i class="fa-brands fa-square-facebook"></i></a>
-        <a><i class="fab fa-instagram"></i></a>
-        <a><i class="fab fa-linkedin"></i></a>
+        <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
+        <a onclick="noinstaAlert()"><i class="fab fa-instagram"></i></a>
+        <a onclick="nolinkedinAlert()"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
     <div class="student-card">
@@ -531,7 +540,7 @@
       <div class="social-links">
         <a href="https://www.facebook.com/share/1P1qmvLJtw/"><i class="fa-brands fa-square-facebook"></i></a>
         <a href="https://www.instagram.com/_suv_02?igsh=MXFxOGM2djZlOGZ1ZA=="><i class="fab fa-instagram"></i></a>
-        <a><i class="fab fa-linkedin"></i></a>
+        <a onclick="nolinkedinAlert()"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
     <div class="student-card">
@@ -547,13 +556,13 @@
       <img class="student-photo" src="image/Kusumita Bartia.jpg">
       <div class="student-name">Kusumita Bartia<br>MCA</div>
       <div class="social-links">
-        <a><i class="fa-brands fa-square-facebook"></i></a>
-        <a><i class="fab fa-instagram"></i></a>
+        <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
+        <a onclick="noinstaAlert()"><i class="fab fa-instagram"></i></a>
         <a href="https://www.linkedin.com/in/kusumita-bartia/"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
     <div class="student-card">
-      <img class="student-photo" src="image/Biswajit Barik.jpg">
+      <img class="student-photo" src="image/sanu.jpg">
       <div class="student-name">Biswajit Barik<br>MCA</div>
       <div class="social-links">
         <a href="https://www.facebook.com/profile.php?id=100034922238025"><i class="fa-brands fa-square-facebook"></i></a>
@@ -565,9 +574,9 @@
       <img class="student-photo" src="image/Barsarani Behera.jpg">
       <div class="student-name">Barsarani Behera <br>MCA</div>
       <div class="social-links">
-        <a><i class="fa-brands fa-square-facebook"></i></a>
+        <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
         <a href="https://www.instagram.com/barish.__.barshu/"><i class="fab fa-instagram"></i></a>
-        <a><i class="fab fa-linkedin"></i></a>
+        <a onclick="nolinkedinAlert()"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
     
@@ -575,7 +584,7 @@
       <img class="student-photo" src="image/Saswat swarup Sahoo.jpg">
       <div class="student-name">Saswat Swarup Sahoo<br>MCA</div>
       <div class="social-links">
-        <a><i class="fa-brands fa-square-facebook"></i></a>
+        <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
         <a href="https://www.instagram.com/saswat_swarup_56?igsh=MTh1azZ5NHhjdzMwaQ=="><i class="fab fa-instagram"></i></a>
         <a href="https://in.linkedin.com/in/saswat22"><i class="fab fa-linkedin"></i></a>
       </div>
@@ -586,23 +595,23 @@
       <div class="social-links">
         <a href="https://www.fb.com/l/6lp1kJRRR"><i class="fa-brands fa-square-facebook"></i></a>
         <a href="https://www.instagram.com/blissfulllll__/"><i class="fab fa-instagram"></i></a>
-        <a><i class="fab fa-linkedin"></i></a>
+        <a onclick="nolinkedinAlert()"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
     <div class="student-card">
       <img class="student-photo" src="image/Nabaneeta Muni.jpg">
       <div class="student-name">Nabaneeta Muni <br>MCA</div>
       <div class="social-links">
-        <a><i class="fa-brands fa-square-facebook"></i></a>
+        <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
         <a href="https://www.instagram.com/nabaneeta_muni?igsh=MXA4bG50MXBxMzdkNA=="><i class="fab fa-instagram"></i></a>
-        <a><i class="fab fa-linkedin"></i></a>
+        <a onclick="nolinkedinAlert()"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
     <div class="student-card">
       <img class="student-photo" src="image/Biswabijayee Panda.png">
       <div class="student-name">Biawabijayee Panda<br>MCA</div>
       <div class="social-links">
-        <a><i class="fa-brands fa-square-facebook"></i></a>
+        <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
         <a href="https://www.instagram.com/b_i_j_a_y_e_e?igsh=aDdia2V1b29rZG84"><i class="fab fa-instagram"></i></a>
         <a href="https://www.linkedin.com/in/biswabijayee096/"><i class="fab fa-linkedin"></i></a>
       </div>
@@ -617,7 +626,7 @@
       </div>
     </div>
     <div class="student-card">
-      <img class="student-photo" src="image/Kalpana Pradhan.jpg">
+      <img class="student-photo" src="image/kalpana.jpg">
       <div class="student-name">Kalpana Pradhan <br>MCA</div>
       <div class="social-links">
         <a href="https://www.facebook.com/share/1FdagPUcbJ/"><i class="fa-brands fa-square-facebook"></i></a>
@@ -630,7 +639,7 @@
       <div class="student-name">Priyadarshini Panda<br>MCA</div>
       <div class="social-links">
         <a href="https://www.facebook.com/share/1C6oyoH95C/"><i class="fa-brands fa-square-facebook"></i></a>
-        <a><i class="fab fa-instagram"></i></a>
+        <a onclick="noinstaAlert()"><i class="fab fa-instagram"></i></a>
         <a href="https://www.linkedin.com/in/priyadarshini-panda-723a1b2aa/"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -638,18 +647,18 @@
       <img class="student-photo" src="image/Ayush Kumar Patel.jpg">
       <div class="student-name">Ayush Kumar Patel<br>MCA</div>
       <div class="social-links">
-        <a><i class="fa-brands fa-square-facebook"></i></a>
+        <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
         <a href="https://www.instagram.com/patel_aadi101?igsh=MXN5aXo2am50a242dA=="><i class="fab fa-instagram"></i></a>
-        <a><i class="fab fa-linkedin"></i></a>
+        <a onclick="nolinkedinAlert()"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
     <div class="student-card">
       <img class="student-photo" src="image/Amit kumar.jpg">
       <div class="student-name">Amit Kumar Singh <br>MCA</div>
       <div class="social-links">
-        <a><i class="fa-brands fa-square-facebook"></i></a>
+        <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
         <a href="https://www.instagram.com/_amxt_45/"><i class="fab fa-instagram"></i></a>
-        <a><i class="fab fa-linkedin"></i></a>
+        <a onclick="nolinkedinAlert()"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
     <div class="student-card">
@@ -674,9 +683,9 @@
       <img class="student-photo" src="image/bidmayee.JPG">
       <div class="student-name">Bidmayee Jena<br>MCA</div>
       <div class="social-links">
-        <a><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="http://www.linkedin.com/in/bidmayee-jena-b42160332"><i class="fab fa-instagram"></i></a>
-        <a><i class="fab fa-linkedin"></i></a>
+        <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
+        <a onclick="noinstaAlert()"><i class="fab fa-instagram"></i></a>
+        <a href="http://www.linkedin.com/in/bidmayee-jena-b42160332"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
     <div class="student-card">
@@ -694,7 +703,7 @@
       <div class="social-links">
         <a href="https://www.facebook.com/share/1MYvCfrHRb/"><i class="fa-brands fa-square-facebook"></i></a>
         <a href="https://www.instagram.com/dads_daneen_rup_?igsh=MXNwcjNnNm9jdnVmZA=="><i class="fab fa-instagram"></i></a>
-        <a><i class="fab fa-linkedin"></i></a>
+        <a onclick="nolinkedinAlert()"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
     <div class="student-card">
@@ -712,15 +721,15 @@
       <div class="social-links">
         <a href="https://www.facebook.com/share/1CTfSZF5K1/"><i class="fa-brands fa-square-facebook"></i></a>
         <a href="https://www.instagram.com/sahoo_manas_09?igsh=MW9tMm11OGh6Mnh3aA=="><i class="fab fa-instagram"></i></a>
-        <a><i class="fab fa-linkedin"></i></a>
+        <a onclick="nolinkedinAlert()"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
     <div class="student-card">
       <img class="student-photo" src="image/Puja.jpg">
       <div class="student-name">Pujarani Samal<br>MCA</div>
       <div class="social-links">
-        <a><i class="fa-brands fa-square-facebook"></i></a>
-        <a><i class="fab fa-instagram"></i></a>
+        <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
+        <a onclick="noinstaAlert()"><i class="fab fa-instagram"></i></a>
         <a href="https://www.linkedin.com/in/pujarani-samal-6273982a5/"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -728,7 +737,7 @@
       <img class="student-photo" src="image/Mohini.jpg">
       <div class="student-name">V Mohini Rao<br>M.Sc.</div>
       <div class="social-links">
-        <a><i class="fa-brands fa-square-facebook"></i></a>
+        <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
         <a href="https://www.instagram.com/jerr_.y._?igsh=cXltend0bXZwbDQx"><i class="fab fa-instagram"></i></a>
         <a href="https://www.linkedin.com/in/mohini-rao-2b63b9363/"><i class="fab fa-linkedin"></i></a>
       </div>
@@ -737,7 +746,7 @@
       <img class="student-photo" src="image/santantu.png">
       <div class="student-name">Santnu Kumar Karjee<br>M.Sc.</div>
       <div class="social-links">
-        <a><i class="fa-brands fa-square-facebook"></i></a>
+        <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
         <a href="https://www.instagram.com/natural_super_physic_/?utm_source=qr&r=nametag"><i class="fab fa-instagram"></i></a>
         <a href="https://www.linkedin.com/in/santunu-kumar-karjee-796596367/"><i class="fab fa-linkedin"></i></a>
       </div>
@@ -746,36 +755,36 @@
       <img class="student-photo" src="image/sripriya.jpg">
       <div class="student-name">Sripriya Mishra<br>MCA</div>
       <div class="social-links">
-        <a><i class="fa-brands fa-square-facebook"></i></a>
+        <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
         <a href="https://www.instagram.com/sripriya_mishra11?igsh=MXcxbWY1NHk1dG1mOA=="><i class="fab fa-instagram"></i></a>
-        <a><i class="fab fa-linkedin"></i></a>
+        <a onclick="nolinkedinAlert()"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
     <div class="student-card">
       <img class="student-photo" src="image/ipsita.jpg">
       <div class="student-name">Ipsita Sethi<br>MCA</div>
       <div class="social-links">
-        <a><i class="fa-brands fa-square-facebook"></i></a>
+        <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
         <a href="https://www.instagram.com/__.ipsitaa.__?igsh=MTl5NHN1ZHU1b2ttYw%3D%3D"><i class="fab fa-instagram"></i></a>
-        <a><i class="fab fa-linkedin"></i></a>
+        <a onclick="nolinkedinAlert()"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
     <div class="student-card">
       <img class="student-photo" src="image/barsha panda.jpg">
       <div class="student-name">Barsharani Panda<br>MCA</div>
       <div class="social-links">
-        <a><i class="fa-brands fa-square-facebook"></i></a>
+        <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
         <a href="https://www.instagram.com/barsha_8449?igsh=aWUwOHlsNnh5b2x1"><i class="fab fa-instagram"></i></a>
-        <a><i class="fab fa-linkedin"></i></a>
+        <a onclick="nolinkedinAlert()"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
     <div class="student-card">
       <img class="student-photo" src="image/dipti.jpg">
       <div class="student-name">Diptimayee Rout <br>MCA</div>
       <div class="social-links">
-        <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+        <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
         <a href="https://www.instagram.com/dipa3917?igsh=NHlrYjZhYmxsemdt"><i class="fab fa-instagram"></i></a>
-        <a href=""><i class="fab fa-linkedin"></i></a>
+        <a onclick="nolinkedinAlert()"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>  
   </div>
