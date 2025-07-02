@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BUCS</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -40,7 +41,7 @@
       width: auto;
       max-width: 100%;
       margin-right: 20px;
-       
+
     }
 
     .header-text {
@@ -73,6 +74,11 @@
       max-width: 450px;
     }
 
+    body.dark-mode .search-container input {
+      background-color: #333;
+      color: white;
+    }
+
     .search-container i.fa-magnifying-glass {
       position: absolute;
       left: 12px;
@@ -83,8 +89,12 @@
       pointer-events: none;
     }
 
+    body.dark-mode .search-container i.fa-magnifying-glass {
+      color: white;
+    }
+
     .search-container input {
-      padding: 10px 10px 10px 35px;  
+      padding: 10px 10px 10px 35px;
       width: 100%;
       font-size: 16px;
       border-radius: 8px;
@@ -144,19 +154,23 @@
     }
 
     .student-card:hover .student-name {
-      color: #2fc7fe;
+      color: #003366;
     }
 
     body.dark-mode .student-name {
-      color: #6ceb0a;
+      color: rgb(250, 213, 145);
     }
 
     body.dark-mode .student-photo {
-      border: 3px solid #bd08ea;
+      border: 3px solid #00da8a;
     }
 
     body.dark-mode .student-card {
-      background: #214047;
+      background: #343232;
+    }
+
+    body.dark-mode .student-card:hover .student-name {
+      color: #46d4ff;
     }
 
     .social-links a {
@@ -169,9 +183,13 @@
       color: #18087d;
     }
 
-    .social-links a .fa-instagram {
-      color: #e4405f;
+    .social-links a .fa-square-instagram {
+      background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 32px;
     }
+
 
     .social-links a .fa-linkedin {
       color: #0077b5;
@@ -185,12 +203,17 @@
       transform: scale(1.2);
     }
 
+    body.dark-mode .social-links a .fa-square-facebook {
+      color: #2c12d5;
+    }
+
     .buttons {
       text-align: center;
       margin: 30px 0;
     }
 
-    .buttons button, .buttons a {
+    .buttons button,
+    .buttons a {
       padding: 10px 20px;
       margin: 10px;
       border: none;
@@ -203,7 +226,8 @@
       text-decoration: none;
     }
 
-    .buttons button:hover, .buttons a:hover {
+    .buttons button:hover,
+    .buttons a:hover {
       background-color: #003f7b;
     }
 
@@ -224,17 +248,40 @@
       display: none;
     }
 
+    .pagination button {
+      background-color: #003366;
+      color: white;
+      border: none;
+      padding: 4px 8px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+
+    .pagination button:hover:not(:disabled) {
+      background-color: #0055aa;
+    }
+
+    .pagination button:disabled {
+      background-color: #cccccc;
+      color: #666666;
+      cursor: not-allowed;
+    }
+
+
     .copyright {
       text-align: center;
     }
-    .message{
+
+    .message {
       text-align: center;
       padding: 30px;
       font-size: 1.3em;
       border-radius: 8px;
       max-width: 1250px;
       margin: 20px auto;
-    
+
     }
 
     @media (max-width: 768px) {
@@ -256,8 +303,11 @@
         font-size: 4vw;
       }
     }
+
     @media (max-width: 480px) {
-      .buttons button, .buttons a {
+
+      .buttons button,
+      .buttons a {
         width: 90%;
         margin: 10px auto;
         display: block;
@@ -274,8 +324,9 @@
         width: 10px 20px;
         font-size: 10px;
         padding: 10px;
+
       }
-}
+    }
 
 
     @media (max-width: 480px) {
@@ -296,7 +347,8 @@
         height: 100px;
       }
 
-      .buttons button, .buttons a {
+      .buttons button,
+      .buttons a {
         width: 90%;
         margin: 10px auto;
         display: block;
@@ -307,6 +359,7 @@
         gap: 3px;
       }
     }
+
     footer {
       background-color: #1f1f1f;
       color: white;
@@ -332,14 +385,17 @@
       color: white;
       white-space: nowrap;
     }
+
     .social a {
       color: #4da6ff;
       text-decoration: none;
       white-space: nowrap;
     }
+
     .social a:hover {
       text-decoration: none;
     }
+
     @media (max-width: 600px) {
       .social {
         justify-content: flex-start;
@@ -411,13 +467,13 @@
         ? "Switch to Light Mode"
         : "Switch to Dark Mode";
     };
-    function nofbAlert(){
+    function nofbAlert() {
       alert("This Person doesn't have Facebook account.");
     }
-    function noinstaAlert(){
+    function noinstaAlert() {
       alert("This Person doesn't have Instagram account.");
     }
-    function nolinkedinAlert(){
+    function nolinkedinAlert() {
       alert("This Person doesn't have LinkedIn account.");
     }
   </script>
@@ -428,7 +484,7 @@
     <img src="image/bu logo.jpeg" alt="University Logo" class="university-logo">
     <div class="header-text">
       <h1>BERHAMPUR UNIVERSITY</h1>
-      <h2>Department of Computer Science - Senior Contacts</h2>
+      <h2>P.G. Department of Computer Science - Senior Contacts</h2>
     </div>
   </header>
 
@@ -445,17 +501,21 @@
       <img class="student-photo" src="image/sudhanshu.jpg">
       <div class="student-name">Sudhanshu Sekhar Samantaray<br>MCA(CR)</div>
       <div class="social-links">
-        <a href="https://www.facebook.com/share/1AVRkSauwp/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com/___.s.u.d.h.a.n.s.h.u.___" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://in.linkedin.com/in/sudhanshu-sekhar-samantaray-3b3437226" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/share/1AVRkSauwp/" target="_blank"><i
+            class="fa-brands fa-square-facebook"></i></a>
+        <a href="https://www.instagram.com/___.s.u.d.h.a.n.s.h.u.___" target="_blank"> <i
+            class="fa-brands fa-square-instagram"></i></a>
+        <a href="https://in.linkedin.com/in/sudhanshu-sekhar-samantaray-3b3437226" target="_blank"><i
+            class="fab fa-linkedin"></i></a>
       </div>
-      </div>
-      <div class="student-card">
+    </div>
+    <div class="student-card">
       <img class="student-photo" src="image/loka - Lokanath Bisoi.jpg">
       <div class="student-name">Lokanath Bisoi<br>M.Sc.(CR)</div>
       <div class="social-links">
         <a href="https://www.facebook.com/share/15QkXfFEGX/"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com/lokanathbisoi?igsh=NXo3cm82c2U1dmFu"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/lokanathbisoi?igsh=NXo3cm82c2U1dmFu"><i
+            class="fa-brands fa-square-instagram"></i></a>
         <a onclick="nolinkedinAlert()"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -464,8 +524,10 @@
       <div class="student-name">Satyabrata Bhuyan <br>MCA</div>
       <div class="social-links">
         <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com/cs_satya_24/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/satyabrata-bhuyan-223157339/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/cs_satya_24/" target="_blank"><i
+            class="fa-brands fa-square-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/satyabrata-bhuyan-223157339/" target="_blank"><i
+            class="fab fa-linkedin"></i></a>
       </div>
     </div>
 
@@ -473,9 +535,12 @@
       <img class="student-photo" src="image/guru_ph.jpg">
       <div class="student-name">Gurupada Nayak<br>MCA</div>
       <div class="social-links">
-        <a href="https://www.facebook.com/gurupada.nayak.587" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com/gurupada__nayak/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/gurupada-nayak-71724b25b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/gurupada.nayak.587" target="_blank"><i
+            class="fa-brands fa-square-facebook"></i></a>
+        <a href="https://www.instagram.com/gurupada__nayak/" target="_blank"><i
+            class="fa-brands fa-square-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/gurupada-nayak-71724b25b/" target="_blank"><i
+            class="fab fa-linkedin"></i></a>
       </div>
     </div>
 
@@ -484,7 +549,7 @@
       <div class="student-name">Manoranjan Das<br>MCA</div>
       <div class="social-links">
         <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com/manoranjan_das_2003/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/manoranjan_das_2003/"><i class="fa-brands fa-square-instagram"></i></a>
         <a href="https://www.linkedin.com/in/manoranjan-das-40558b302/"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -494,7 +559,7 @@
       <div class="student-name">Biswajit Bal<br>MCA</div>
       <div class="social-links">
         <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com/_biswajit_bal_/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/_biswajit_bal_/"><i class="fa-brands fa-square-instagram"></i></a>
         <a onclick="nolinkedinAlert()"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -503,7 +568,8 @@
       <div class="student-name">Sambit Kumar Sethi<br>MCA</div>
       <div class="social-links">
         <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com/sambit_13_?igsh=MW1mb3l1amtqNTRzbA=="><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/sambit_13_?igsh=MW1mb3l1amtqNTRzbA=="><i
+            class="fa-brands fa-square-instagram"></i></a>
         <a href="https://www.linkedin.com/in/sambit-kumar-sethi-7a7480303/"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -512,7 +578,8 @@
       <div class="student-name">Kiran Jyoti Mohanty<br>MCA</div>
       <div class="social-links">
         <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com/the_sparkler.kjm?igsh=dHgwdDAxaTI1ZWg4"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/the_sparkler.kjm?igsh=dHgwdDAxaTI1ZWg4"><i
+            class="fa-brands fa-square-instagram"></i></a>
         <a href="https://www.linkedin.com/in/kiran-jyoti-mohanty-997119274/"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -521,7 +588,7 @@
       <div class="student-name">Bismita Prusty<br>MCA</div>
       <div class="social-links">
         <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
-        <a onclick="noinstaAlert()"><i class="fab fa-instagram"></i></a>
+        <a onclick="noinstaAlert()"><i class="fa-brands fa-square-instagram"></i></a>
         <a onclick="nolinkedinAlert()"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -530,7 +597,8 @@
       <div class="student-name">Loknath Sahu<br>MCA</div>
       <div class="social-links">
         <a href="https://www.facebook.com/share/169Hw9nQc1/"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com/ig.amitx18?igsh=MTk3M2dvcmF3aHh6cg=="><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/ig.amitx18?igsh=MTk3M2dvcmF3aHh6cg=="><i
+            class="fa-brands fa-square-instagram"></i></a>
         <a href="https://www.linkedin.com/in/loknath-sahu-62a018263"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -539,7 +607,8 @@
       <div class="student-name">Shubhasmita Sabar<br>MCA</div>
       <div class="social-links">
         <a href="https://www.facebook.com/share/1P1qmvLJtw/"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com/_suv_02?igsh=MXFxOGM2djZlOGZ1ZA=="><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/_suv_02?igsh=MXFxOGM2djZlOGZ1ZA=="><i
+            class="fa-brands fa-square-instagram"></i></a>
         <a onclick="nolinkedinAlert()"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -548,7 +617,8 @@
       <div class="student-name">Sai Rudranarayan Barik<br>MCA</div>
       <div class="social-links">
         <a href="https://www.facebook.com/share/1HY1rFBv9s/"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com/sai__krish__na?igsh=ODFhZDRweTRnZm9v"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/sai__krish__na?igsh=ODFhZDRweTRnZm9v"><i
+            class="fa-brands fa-square-instagram"></i></a>
         <a href="https://www.linkedin.com/in/sai-rudranarayan-barik-5a1781339/"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -557,7 +627,7 @@
       <div class="student-name">Kusumita Bartia<br>MCA</div>
       <div class="social-links">
         <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
-        <a onclick="noinstaAlert()"><i class="fab fa-instagram"></i></a>
+        <a onclick="noinstaAlert()"><i class="fa-brands fa-square-instagram"></i></a>
         <a href="https://www.linkedin.com/in/kusumita-bartia/"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -565,8 +635,10 @@
       <img class="student-photo" src="image/sanu.jpg">
       <div class="student-name">Biswajit Barik<br>MCA</div>
       <div class="social-links">
-        <a href="https://www.facebook.com/profile.php?id=100034922238025"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com/th__sanan?igsh=MWNoMzd6OHhhN2xrMA=="><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100034922238025"><i
+            class="fa-brands fa-square-facebook"></i></a>
+        <a href="https://www.instagram.com/th__sanan?igsh=MWNoMzd6OHhhN2xrMA=="><i
+            class="fa-brands fa-square-instagram"></i></a>
         <a href="https://www.linkedin.com/in/biswajit-barik-a70a492a3/"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -575,17 +647,18 @@
       <div class="student-name">Barsarani Behera <br>MCA</div>
       <div class="social-links">
         <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com/barish.__.barshu/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/barish.__.barshu/"><i class="fa-brands fa-square-instagram"></i></a>
         <a onclick="nolinkedinAlert()"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
-    
+
     <div class="student-card">
       <img class="student-photo" src="image/Saswat swarup Sahoo.jpg">
       <div class="student-name">Saswat Swarup Sahoo<br>MCA</div>
       <div class="social-links">
         <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com/saswat_swarup_56?igsh=MTh1azZ5NHhjdzMwaQ=="><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/saswat_swarup_56?igsh=MTh1azZ5NHhjdzMwaQ=="><i
+            class="fab fa-instagram"></i></a>
         <a href="https://in.linkedin.com/in/saswat22"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -594,7 +667,7 @@
       <div class="student-name">Swagatika Behera <br>M.Sc.</div>
       <div class="social-links">
         <a href="https://www.fb.com/l/6lp1kJRRR"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com/blissfulllll__/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/blissfulllll__/"><i class="fa-brands fa-square-instagram"></i></a>
         <a onclick="nolinkedinAlert()"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -603,7 +676,8 @@
       <div class="student-name">Nabaneeta Muni <br>MCA</div>
       <div class="social-links">
         <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com/nabaneeta_muni?igsh=MXA4bG50MXBxMzdkNA=="><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/nabaneeta_muni?igsh=MXA4bG50MXBxMzdkNA=="><i
+            class="fa-brands fa-square-instagram"></i></a>
         <a onclick="nolinkedinAlert()"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -612,7 +686,8 @@
       <div class="student-name">Biawabijayee Panda<br>MCA</div>
       <div class="social-links">
         <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com/b_i_j_a_y_e_e?igsh=aDdia2V1b29rZG84"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/b_i_j_a_y_e_e?igsh=aDdia2V1b29rZG84"><i
+            class="fa-brands fa-square-instagram"></i></a>
         <a href="https://www.linkedin.com/in/biswabijayee096/"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -620,8 +695,10 @@
       <img class="student-photo" src="image/Minakhi Nayak.jpg">
       <div class="student-name">Minakhi Nayak <br>M.Sc.</div>
       <div class="social-links">
-        <a href="https://www.facebook.com/profile.php?id=100090362282033"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com/p.misty_minakhi?igsh=Y2VudzVjenBxZ3l2"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100090362282033"><i
+            class="fa-brands fa-square-facebook"></i></a>
+        <a href="https://www.instagram.com/p.misty_minakhi?igsh=Y2VudzVjenBxZ3l2"><i
+            class="fa-brands fa-square-instagram"></i></a>
         <a href="https://www.linkedin.com/in/minakhi-nayak-023b222a9/"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -630,7 +707,7 @@
       <div class="student-name">Kalpana Pradhan <br>MCA</div>
       <div class="social-links">
         <a href="https://www.facebook.com/share/1FdagPUcbJ/"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com/kalpanapradhan777/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/kalpanapradhan777/"><i class="fa-brands fa-square-instagram"></i></a>
         <a href="https://www.linkedin.com/in/kalpana-pradhan-b7159b366/"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -639,7 +716,7 @@
       <div class="student-name">Priyadarshini Panda<br>MCA</div>
       <div class="social-links">
         <a href="https://www.facebook.com/share/1C6oyoH95C/"><i class="fa-brands fa-square-facebook"></i></a>
-        <a onclick="noinstaAlert()"><i class="fab fa-instagram"></i></a>
+        <a onclick="noinstaAlert()"><i class="fa-brands fa-square-instagram"></i></a>
         <a href="https://www.linkedin.com/in/priyadarshini-panda-723a1b2aa/"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -648,7 +725,8 @@
       <div class="student-name">Ayush Kumar Patel<br>MCA</div>
       <div class="social-links">
         <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com/patel_aadi101?igsh=MXN5aXo2am50a242dA=="><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/patel_aadi101?igsh=MXN5aXo2am50a242dA=="><i
+            class="fa-brands fa-square-instagram"></i></a>
         <a onclick="nolinkedinAlert()"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -657,7 +735,7 @@
       <div class="student-name">Amit Kumar Singh <br>MCA</div>
       <div class="social-links">
         <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com/_amxt_45/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/_amxt_45/"><i class="fa-brands fa-square-instagram"></i></a>
         <a onclick="nolinkedinAlert()"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -666,7 +744,8 @@
       <div class="student-name">Keshab Chandra Sahu<br>MCA</div>
       <div class="social-links">
         <a href="https://www.facebook.com/share/12Lvfg1evA3/"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com/sahu_keshav_03?igsh=MXY0bDFjMnhrOWF3MA=="><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/sahu_keshav_03?igsh=MXY0bDFjMnhrOWF3MA=="><i
+            class="fa-brands fa-square-instagram"></i></a>
         <a href="https://www.linkedin.com/in/keshabchandra-sahu-66868321a/"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -674,8 +753,10 @@
       <img class="student-photo" src="image/D - DIBYAJYOTI BEHERA.jpg">
       <div class="student-name">Dibyajyoti Behera<br>MCA</div>
       <div class="social-links">
-        <a href="https://www.facebook.com/dibyajyoti.behera.96155?mibextid=ZbWKwL"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com/invites/contact/?igsh=xjg0550ypw1g&utm_content=kmrj3fv"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/dibyajyoti.behera.96155?mibextid=ZbWKwL"><i
+            class="fa-brands fa-square-facebook"></i></a>
+        <a href="https://www.instagram.com/invites/contact/?igsh=xjg0550ypw1g&utm_content=kmrj3fv"><i
+            class="fa-brands fa-square-instagram"></i></a>
         <a href="https://www.linkedin.com/in/dibyajyoti-behera-1a13bb220/"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -684,7 +765,7 @@
       <div class="student-name">Bidmayee Jena<br>MCA</div>
       <div class="social-links">
         <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
-        <a onclick="noinstaAlert()"><i class="fab fa-instagram"></i></a>
+        <a onclick="noinstaAlert()"><i class="fa-brands fa-square-instagram"></i></a>
         <a href="http://www.linkedin.com/in/bidmayee-jena-b42160332"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -693,7 +774,7 @@
       <div class="student-name">Pratyush Kumar Pasayat<br>M.Sc.</div>
       <div class="social-links">
         <a href="https://www.facebook.com/pratyush.pasayat.92"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com/_pratyush.pasayat_"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/_pratyush.pasayat_"><i class="fa-brands fa-square-instagram"></i></a>
         <a href="https://www.linkedin.com/in/pratyush-kumar-pasayat-745897314"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -702,7 +783,8 @@
       <div class="student-name">Rupa Singh<br>MCA</div>
       <div class="social-links">
         <a href="https://www.facebook.com/share/1MYvCfrHRb/"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com/dads_daneen_rup_?igsh=MXNwcjNnNm9jdnVmZA=="><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/dads_daneen_rup_?igsh=MXNwcjNnNm9jdnVmZA=="><i
+            class="fa-brands fa-square-instagram"></i></a>
         <a onclick="nolinkedinAlert()"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -711,8 +793,11 @@
       <div class="student-name">Bhabani Sankar Palei<br>MCA</div>
       <div class="social-links">
         <a href="https://www.facebook.com/bhabani.palei.52"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com/bu__bhabani?igsh=bHZnbzAzdW53Y2gx"><i class="fab fa-instagram"></i></a>
-        <a href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=bhabani-palei-97b608360"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/bu__bhabani?igsh=bHZnbzAzdW53Y2gx"><i
+            class="fa-brands fa-square-instagram"></i></a>
+        <a
+          href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=bhabani-palei-97b608360"><i
+            class="fab fa-linkedin"></i></a>
       </div>
     </div>
     <div class="student-card">
@@ -720,7 +805,8 @@
       <div class="student-name">Manoranjan Sahoo<br>MCA</div>
       <div class="social-links">
         <a href="https://www.facebook.com/share/1CTfSZF5K1/"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com/sahoo_manas_09?igsh=MW9tMm11OGh6Mnh3aA=="><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/sahoo_manas_09?igsh=MW9tMm11OGh6Mnh3aA=="><i
+            class="fa-brands fa-square-instagram"></i></a>
         <a onclick="nolinkedinAlert()"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -729,7 +815,7 @@
       <div class="student-name">Pujarani Samal<br>MCA</div>
       <div class="social-links">
         <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
-        <a onclick="noinstaAlert()"><i class="fab fa-instagram"></i></a>
+        <a onclick="noinstaAlert()"><i class="fa-brands fa-square-instagram"></i></a>
         <a href="https://www.linkedin.com/in/pujarani-samal-6273982a5/"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -738,7 +824,8 @@
       <div class="student-name">V Mohini Rao<br>M.Sc.</div>
       <div class="social-links">
         <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com/jerr_.y._?igsh=cXltend0bXZwbDQx"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/jerr_.y._?igsh=cXltend0bXZwbDQx"><i
+            class="fa-brands fa-square-instagram"></i></a>
         <a href="https://www.linkedin.com/in/mohini-rao-2b63b9363/"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -747,7 +834,8 @@
       <div class="student-name">Santnu Kumar Karjee<br>M.Sc.</div>
       <div class="social-links">
         <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com/natural_super_physic_/?utm_source=qr&r=nametag"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/natural_super_physic_/?utm_source=qr&r=nametag"><i
+            class="fa-brands fa-square-instagram"></i></a>
         <a href="https://www.linkedin.com/in/santunu-kumar-karjee-796596367/"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -756,7 +844,8 @@
       <div class="student-name">Sripriya Mishra<br>MCA</div>
       <div class="social-links">
         <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com/sripriya_mishra11?igsh=MXcxbWY1NHk1dG1mOA=="><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/sripriya_mishra11?igsh=MXcxbWY1NHk1dG1mOA=="><i
+            class="fa-brands fa-square-instagram"></i></a>
         <a onclick="nolinkedinAlert()"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -765,7 +854,8 @@
       <div class="student-name">Ipsita Sethi<br>MCA</div>
       <div class="social-links">
         <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com/__.ipsitaa.__?igsh=MTl5NHN1ZHU1b2ttYw%3D%3D"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/__.ipsitaa.__?igsh=MTl5NHN1ZHU1b2ttYw%3D%3D"><i
+            class="fa-brands fa-square-instagram"></i></a>
         <a onclick="nolinkedinAlert()"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -774,7 +864,8 @@
       <div class="student-name">Barsharani Panda<br>MCA</div>
       <div class="social-links">
         <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com/barsha_8449?igsh=aWUwOHlsNnh5b2x1"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/barsha_8449?igsh=aWUwOHlsNnh5b2x1"><i
+            class="fa-brands fa-square-instagram"></i></a>
         <a onclick="nolinkedinAlert()"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -783,16 +874,17 @@
       <div class="student-name">Diptimayee Rout <br>MCA</div>
       <div class="social-links">
         <a onclick="nofbAlert()"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://www.instagram.com/dipa3917?igsh=NHlrYjZhYmxsemdt"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/dipa3917?igsh=NHlrYjZhYmxsemdt"><i
+            class="fa-brands fa-square-instagram"></i></a>
         <a onclick="nolinkedinAlert()"><i class="fab fa-linkedin"></i></a>
       </div>
-    </div>  
+    </div>
   </div>
   <div class="pagination">
     <button id="prevBtn" class="hidden" onclick="prevPage()">Previous</button>
     <span id="pageNum">Page 1</span>
     <button id="nextBtn" onclick="nextPage()">Next</button>
-  </div> 
+  </div>
   <div class="buttons">
     <button id="modeToggleBtn" onclick="toggleDarkMode()">Switch to Dark Mode</button>
   </div>
@@ -804,15 +896,17 @@
       <span>Follow us:</span>
       <a>Facebook</a> |
       <a>Instagram</a> |
-      <a>LinkedIn</a> 
+      <a>LinkedIn</a>
     </div>
     <p class="footer-text">
-      If you need any assistance during onboarding or exploring advanced features, please reach out to your seniors — we're here to support every step of your journey.
+      If you need any assistance during onboarding or exploring advanced features, please reach out to your seniors —
+      we're here to support every step of your journey.
     </p>
     <p class="footer-text">
       &copy; 2025 Senior-Junior Connectivity Platform. All rights reserved.
     </p>
   </footer>
-</div>
+  </div>
 </body>
+
 </html>
